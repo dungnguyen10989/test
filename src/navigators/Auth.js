@@ -5,7 +5,10 @@ import Main from '../screens/Main';
 import Profile from '../screens/Profile';
 
 const routeConfig = {
-  Main: { screen: ({ navigation, screenProps }) => <Main />},
+  Main: { screen: ({ navigation, screenProps }) => {
+    console.log(navigation)
+    return <Main />
+  }},
   Profile: { screen: ({ navigation, screenProps }) => <Profile navigation={navigation}/> }
 }
 

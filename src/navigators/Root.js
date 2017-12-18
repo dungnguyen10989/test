@@ -6,7 +6,7 @@ import UnAuth from './UnAuth';
 //import Auth2 from './Auth2';
 
 const routeConfig = {
-  Auth: { screen: ({ navigation, screenProps }) => <Auth/> },
+  Auth: { screen: ({ navigation }) => <Auth/> },
   UnAuth: { screen: ({ navigation, screenProps }) => <UnAuth /> }
 }
 

@@ -6,10 +6,10 @@ import { NavigationActions } from 'react-navigation';
 const resetAction = NavigationActions.reset({
   index: 0,
   actions: [
-    NavigationActions.navigate({ routeName: 'Auth' })
-  ],
-  key: null
+    NavigationActions.navigate({ routeName: 'Main' })
+  ]
 })
+
 
 const navigateAction = NavigationActions.navigate({
   routeName: 'SignUp'
@@ -43,4 +43,4 @@ class SignIn extends React.Component {
     );
   }
 }
-export default connect()(SignIn);
+export default connect(state => ({ _rootNav: state._rootNav, _authNav: state._authNav }))(SignIn);
